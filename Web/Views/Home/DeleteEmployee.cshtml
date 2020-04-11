@@ -1,0 +1,17 @@
+﻿@using Web.Models
+@model EmployeeViewModel
+@{
+    ViewBag.Title = "DeleteEmployee";
+}
+
+<h2>Delete Employee</h2>
+
+@using (Html.BeginForm())
+{
+    <br />
+
+    <p>Enter id to remove: @Html.TextBoxFor(x => x.EmployeeId)</p>
+    <br />
+    <input type="submit" value="Delete" />
+
+}

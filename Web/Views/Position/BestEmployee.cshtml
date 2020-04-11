@@ -1,0 +1,36 @@
+﻿@using Web.Models
+@model EmployeeViewModel
+@{
+    ViewBag.Title = "BestEmployee";
+}
+
+<h2>Best Employee</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Surname
+        </th>
+        <th>
+            Experience (years)
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Model.Name
+        </td>
+        <td>
+            @Model.Surname
+        </td>
+        <td>
+            @Model.Experience
+        </td>
+    </tr>
+ 
+</table>
+<h4>
+    @Html.ActionLink("Back to positions", "Index", "Position")
+</h4>

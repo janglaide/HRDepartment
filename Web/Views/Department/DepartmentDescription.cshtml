@@ -1,0 +1,29 @@
+﻿@model Web.Models.DepartmentViewModel
+@{
+    ViewBag.Title = "DepartmentDescription";
+}
+
+<h2>Department Description</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+    </tr>
+    <tr>
+        <td>
+            @Model.Name
+        </td>
+        <td>
+            @Model.Description
+        </td>
+    </tr>
+
+</table>
+<h4>
+    @Html.ActionLink("Back to Departments", "Index", "Department")
+</h4>

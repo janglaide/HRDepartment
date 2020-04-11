@@ -1,0 +1,23 @@
+﻿@using Web.Models
+@model FullEmployeeViewModel
+
+@{
+    ViewBag.Title = "AddEmployee";
+}
+
+<h2>Add an Employee</h2>
+
+@using (Html.BeginForm())
+{
+
+    <br />
+    <p>Your name: @Html.TextBoxFor(x => x.Name)</p>
+    <p>Your surname: @Html.TextBoxFor(x => x.Surname)</p>
+    <p>Your experience: @Html.TextBoxFor(x => x.Experience)</p>
+    <p>Your payment Number: @Html.TextBoxFor(x => x.PaymentNum)</p>
+    <p>Your department: @Html.TextBoxFor(x => x.DepartmentName)</p>
+    <p>Your position: @Html.TextBoxFor(x => x.Position)</p>
+    <br />
+    <input type="submit" value="Add" />
+
+}

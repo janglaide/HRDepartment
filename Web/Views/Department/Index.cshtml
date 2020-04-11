@@ -1,0 +1,46 @@
+﻿@using Web.Models
+@model IEnumerable<DepartmentViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Departments</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            N
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Employees
+        </th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.DepartmentId
+            </td>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @Html.ActionLink("Click here", "DepartmentDescription", new { id = item.DepartmentId})
+            </td>
+            <td>
+                @Html.ActionLink("Click here", "DepartmentEmployees", new { id = item.DepartmentId})
+            </td>
+        </tr>
+    }
+
+</table>
+
+@Html.ActionLink("Add a department", "AddDepartment")

@@ -1,0 +1,52 @@
+﻿@using Web.Models
+@model IEnumerable<EmployeeViewModel>
+@{
+    ViewBag.Title = "DepartmentEmployees";
+}
+
+<h2>Employees</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            N
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Surname
+        </th>
+        <th>
+            Experience (years)
+        </th>
+
+    </tr>
+    @{
+        int i = 1;
+    }
+
+    @foreach (EmployeeViewModel item in Model)
+    {
+        <tr>
+            <td>
+                @i
+            </td>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Surname
+            </td>
+            <td>
+                @item.Experience
+            </td>
+        </tr>
+        i++;
+    }
+
+</table>
+<h4>
+    @Html.ActionLink("Back to Departments", "Index", "Department")
+</h4>

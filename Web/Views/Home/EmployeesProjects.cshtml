@@ -1,0 +1,51 @@
+﻿@using Web.Models
+@model IEnumerable<ProjectViewModel>
+@{
+    ViewBag.Title = "EmployeesProjects";
+}
+
+<h2>Employee`s Projects</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            N
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Cost
+        </th>
+
+    </tr>
+    @{
+        int i = 1;
+    }
+
+    @foreach (ProjectViewModel item in Model)
+    {
+        <tr>
+            <td>
+                @i
+            </td>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Description
+            </td>
+            <td>
+                @item.Cost
+            </td>
+        </tr>
+        i++;
+    }
+
+</table>
+<h4>
+    @Html.ActionLink("Back to all employees", "Index", "Home")
+</h4>
